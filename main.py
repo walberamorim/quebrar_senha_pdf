@@ -12,6 +12,7 @@ with open(wordlist_path, "r", encoding="latin-1") as wordlist:
         password = line.strip()
         tentativas += 1
         try:
+            print(f"🔑 Tentando com '{password}'")
             with pikepdf.open(pdf_path, password=password):
                 print(f"[+] Senha encontrada: {password}")
                 break
